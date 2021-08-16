@@ -46,7 +46,7 @@ class Processor(inputFile : String,
     .withAttributes(ActorAttributes.supervisionStrategy(_ => Supervision.Resume))
 
   private def createTweetObject: Flow[Array[String], TweetURL, NotUsed] = Flow[Array[String]]
-    .map(array => TweetURL(array(0), array(1), array(3), 123L))
+    .map(array => TweetURL(array(0), array(1), array(3)))
     .withAttributes(ActorAttributes.supervisionStrategy(_ => Supervision.Resume))
 
   private def fetchTweet: Flow[TweetURL, TweetEnhanced, NotUsed] = Flow[TweetURL].throttle(900, 15.minutes)

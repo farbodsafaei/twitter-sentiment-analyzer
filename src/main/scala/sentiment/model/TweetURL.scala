@@ -2,7 +2,7 @@ package sentiment.model
 
 import java.time.ZonedDateTime
 
-case class TweetURL(id: String, author: String, url: String, timestamp: Long)
+case class TweetURL(id: String, author: String, url: String)
 
 case class TweetEnhanced(id: String, text: String, author_id: String, author: String, tweet_url: String, created_at: ZonedDateTime)
 

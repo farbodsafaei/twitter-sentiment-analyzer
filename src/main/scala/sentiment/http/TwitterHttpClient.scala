@@ -14,7 +14,7 @@ import sentiment.model._
 import sentiment.http.JsonHelper._
 
 
-class TwitterHttpClient(http: HttpExt, val baseURL: String, bearerToken: String)(implicit mat: Materializer, ec: ExecutionContext) extends LazyLogging {
+class TwitterHttpClient(http: HttpExt, baseURL: String, bearerToken: String)(implicit mat: Materializer, ec: ExecutionContext) extends LazyLogging {
 
 
   def fetchTweet(tweetUrl: TweetURL): Future[Option[TweetEnhanced]] = {

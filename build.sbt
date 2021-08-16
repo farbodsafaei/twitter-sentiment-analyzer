@@ -8,6 +8,7 @@ Compile / run / fork := true
 
 libraryDependencies ++= Seq(
   "edu.stanford.nlp" % "stanford-corenlp" % "4.2.2",
+  "edu.stanford.nlp" % "stanford-corenlp" % "4.2.2" classifier "models",
   "com.typesafe.akka" %% "akka-stream" % "2.6.15",
   "com.typesafe.akka" %% "akka-http" % "10.2.6",
   "com.lightbend.akka" %% "akka-stream-alpakka-csv" % "3.0.3",
